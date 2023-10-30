@@ -6,7 +6,7 @@ from PIL import Image
 from io import BytesIO
 import base64
 
-openai.api_key = st.secrets["db_openai_key"]
+openai.api_key = os.getenv("db_openai_key")
 
 def base64_to_image(base64_string):
     # Decode the base64 string
